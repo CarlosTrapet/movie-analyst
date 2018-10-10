@@ -1,0 +1,46 @@
+{
+  "name": "movie-analyst",
+  "version": "1.0.0",
+  "description": "An API to aggregate movie reviews",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "npm test",
+    "coverage": "nyc mocha -t 60000 --exit 'test/spec.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1",
+    "sinon": "^6.3.5",
+    "sinon-chai": "^3.2.0",
+    "sinon-express-mock": "^2.0.5"
+  },
+  "nyc": {
+    "exclude": [
+      "config/**/*.js",
+      "**/*.spec.js",
+      "**/index.js",
+      ".nyc_output",
+      "nyc_output",
+      "app.js",
+      "test"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosTrapet/movie-analyst.git"
+  },
+  "author": "Carlos Trapet",
+  "license": "ISC",
+  "homepage": "https://github.com/CarlosTrapet/movie-analyst#readme"
+}
